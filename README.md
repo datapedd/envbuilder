@@ -41,8 +41,8 @@ $ vim .devcontainer/Dockerfile
 ```
 
 ```diff
-- RUN apt-get install vim sudo -y
-+ RUN apt-get install vim sudo htop -y
+- RUN apt-get install vim sudo curl -y
++ RUN apt-get install vim sudo curl htop -y
 ```
 
 Exit the container, and re-run the `docker run` command... after the build completes, `htop` should exist in the container! 🥳
